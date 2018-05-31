@@ -28,7 +28,7 @@ Se obtubó la URI de el comic Cable&Deadpool (\#46) buscando con la peticion de 
 
 Luego de utilizar la URI obtenida se obtuvo el JSON con toda la informacion del comic, incluyendo la informacion requerida.
 
-![Characters](Source/CD-characters.png)<br>
+![Characters](Source/CDcharacters.png)<br>
 
 ver Week2\Challenge2\Source\CDcharacters.json
 
