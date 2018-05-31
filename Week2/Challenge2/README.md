@@ -24,13 +24,13 @@ Despues de que el script calculara el hash se procedió a realizar las peticione
 
 Se obtubó la URI de el comic Cable&Deadpool (\#46) buscando con la peticion de todos los personajes para la primera petición.
 
-![Characters URI](Source/Cable&Deadpool-(#46)-characters-uri.png)<br>
+![Characters URI](Source/CDcharacters-uri.png)<br>
 
 Luego de utilizar la URI obtenida se obtuvo el JSON con toda la informacion del comic, incluyendo la informacion requerida.
 
-![Characters](Source/Cable&Deadpool-(#46)-characters.png)<br>
+![Characters](Source/CD-characters.png)<br>
 
-ver Week2\Challenge2\Source\Cable&Deadpool (#46) characters.json
+ver Week2\Challenge2\Source\CDcharacters.json
 
 Para la segunda petición, se obtuvo el ID de Agent X (Nijo) traves de la primera petición ya que aparece en ese comic. a lo cual se hizo la siguiente petición
 
