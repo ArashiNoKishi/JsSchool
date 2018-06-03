@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bookshelf - JsSchool</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link rel="stylesheet" href="Resources/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $(window).on('load resize',function() {
+     if ($(this).width() < 800) {
+         $('.tglmenu').hide();
+     } else if ($(this).width() > 800){
+        $(".tglmenu").show();
+     }
+    });
+    $("#minTgl").click(function(){
+      $("#hdnInfo").toggle();
+    });
+    $(".locTgl").click(function(){
+      $(".cityList").slideToggle(500);
+      $(".tglmenu").toggle();
+    });
+
+  });
+
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="logo">
+        <a href="https://www.jobsity.com"><span class="logo"><img src="https://www.jobsity.com/themes/custom/jobsity/images/icons/logo2.svg" alt="Jobsity"></span><span class="logotext">Jobsity</span></a>
+      </div>
+      <div class="username">
+        <span class="user">User</span><span class="user"><i class="material-icons md-36">account_circle</i></span>
+      </div>
+    </div>
+    <div class="sideLeft">
+      <ul style="list-style-type: none; margin: 0; padding: 0;">
+        <li>
+          <span class="opt"><i class="material-icons md-36">library_books</i><span class="tglmenu">My Books</span></span>
+        </li>
+        <li>
+          <span class="opt locTgl"><i class="material-icons md-36">place</i><span class="tglmenu">Location</span></span>
+        </li>
+        <li style="display: none" class="cityList">
+          <ul>
+            <li class="opt">Quito</li>
+            <li class="opt">Cartagena</li>
+            <li class="opt">Medellin</li>
+          </ul>
+        </li>
+        <li>
+          <span class="opt"><i class="material-icons md-36">bookmark</i><span class="tglmenu">Bookmarks</span></span>
+        </li>
+      </ul>
+      </div>
+    <div class="mainShelf">
+      <h1 class="book">BOOKSHELF</h1>
+      <div class="shelf">
+        <span class="books 1"><img src="Resources/images/bookC++.jpg"></span>
+        <span class="books 2"><img src="Resources/images/bookCoffee.jpg"></span>
+        <span class="books 3"><img src="Resources/images/bookGo.jpg"></span>
+        <span class="books 4"><img src="Resources/images/bookJava.png"></span>
+        <span class="books 5"><img src="Resources/images/bookJava8.jpg"></span>
+        <span class="books 6"><img src="Resources/images/bookJS.jpg"></span>
+        <span class="books 7"><img src="Resources/images/bookPython.png"></span>
+        <span class="books 8"><img src="Resources/images/bookPythonL.jpg"></span>
+      </div>
+    </div>
+    <div class="sideRight">
+      <div class="bookInfo">
+        <table>
+          <tr>
+            <th colspan="2"><i class="material-icons">local_library</i><span class="bookName">NombreLibro</span></th>
+          </tr>
+          <tr>
+            <td>Autor:</td><td><span class="bookAuth"></span></td>
+          </tr>
+          <tr>
+            <td>Lenguaje de Programación:</td><td><span class="bookPL"></span></td>
+          </tr>
+          <tr>
+            <td>Año:</td><td><span class="bookYear"></span></td>
+          </tr>
+          <tr>
+            <td>Estado:</td><td><span class="bookStatus"></span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="dropdown">
+      <div>
+        <span class="opt" id="minTgl"><i class="material-icons">keyboard_arrow_down</i></span>
+      </div>
+      <div class="bookInfo" id="hdnInfo">
+        <table>
+          <tr>
+            <th colspan="2"><i class="material-icons">local_library</i><span class="bookName">NombreLibro</span></th>
+          </tr>
+          <tr>
+            <td>Autor:</td><td><span class="bookAuth"></span></td>
+          </tr>
+          <tr>
+            <td>Lenguaje de Programación:</td><td><span class="bookPL"></span></td>
+          </tr>
+          <tr>
+            <td>Año:</td><td><span class="bookYear"></span></td>
+          </tr>
+          <tr>
+            <td>Estado:</td><td><span class="bookStatus"></span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <!--<div class="footer">
+      footer
+    </div>-->
+</div>
+</body>
+</html>
