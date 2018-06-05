@@ -12,9 +12,10 @@
     var seconds = Math.floor((difference % (1000*60))/1000);
 
     document.getElementById('countdown').innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+
+    if (difference<0){
+      clearInterval(update);
+      document.getElementById('countdown').innerHTML = "done";
+    }
   },1000);
-
-
-
-
 })();
