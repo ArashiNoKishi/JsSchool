@@ -1,6 +1,10 @@
 (function () {
-  var target = new Date(2018,10,19,0,0,0,0).getTime();
 
+  var time = 300; //input en segundos
+  var timer = new Date();
+  timer.setSeconds(timer.getSeconds()+time);
+
+  var target = timer.getTime();
   var update = setInterval( function(){
     var now = new Date().getTime();
 
@@ -15,7 +19,7 @@
 
     if (difference<0){
       clearInterval(update);
-      document.getElementById('countdown').innerHTML = "done";
+      document.getElementById('countdown').innerHTML = "Time up!";
     }
   },1000);
 })();
