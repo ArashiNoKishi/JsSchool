@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JsSchool - Piano</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/piano.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Piano</h1>
+      <span id="keyboard"><span>Toggle help</span><img src="js/images/keyboard.png" alt="Toogle Keyboard help"></span>
+      <div class="piano">
+        <div class="note">
+          <div class="sharp" id="cs">
+            <audio src="js/notes/note2s.mp3" id="audiocs"></audio>
+            <span class="label">C#</span>
+            <span class="help">W</span>
+          </div>
+          <div class="flat" id="c">
+            <audio src="js/notes/note1s.mp3" id="audioc"></audio>
+            <span class="label">C</span>
+            <span class="help">A</span>
+          </div>
+        </div>
+        <div class="note">
+          <div class="sharp" id="ds">
+            <audio src="js/notes/note4s.mp3" id="audiods"></audio>
+            <span class="label">D#</span>
+            <span class="help">E</span>
+          </div>
+          <div class="flat" id="d">
+            <audio src="js/notes/note3s.mp3" id="audiod"></audio>
+            <span class="label">D</span>
+            <span class="help">S</span>
+          </div>
+        </div>
+        <div class="note">
+          <div class="flat" id="e">
+            <audio src="js/notes/note5s.mp3" id="audioe"></audio>
+            <span class="label">E</span>
+            <span class="help">D</span>
+          </div>
+        </div>
+        <div class="note">
+          <div class="sharp" id="fs">
+            <audio src="js/notes/note7s.mp3" id="audiofs"></audio>
+            <span class="label">F#</span>
+            <span class="help">T</span>
+          </div>
+          <div class="flat" id="f">
+            <audio src="js/notes/note6s.mp3" id="audiof"></audio>
+            <span class="label">F</span>
+            <span class="help">F</span>
+          </div>
+        </div>
+        <div class="note">
+          <div class="sharp" id="gs">
+            <audio src="js/notes/note9s.mp3" id="audiogs"></audio>
+            <span class="label">G#</span>
+            <span class="help">Y</span>
+          </div>
+          <div class="flat" id="g">
+            <audio src="js/notes/note8s.mp3" id="audiog"></audio>
+            <span class="label">G</span>
+            <span class="help">G</span>
+          </div>
+        </div>
+        <div class="note">
+          <div class="sharp" id="as">
+            <audio src="js/notes/note11s.mp3" id="audioas"></audio>
+            <span class="label">A#</span>
+            <span class="help">U</span>
+          </div>
+          <div class="flat" id="a">
+            <audio src="js/notes/note10s.mp3" id="audioa"></audio>
+            <span class="label">A</span>
+            <span class="help">H</span>
+          </div>
+        </div>
+        <div class="note">
+          <div class="flat" id="b">
+            <audio src="js/notes/note12s.mp3" id="audiob"></audio>
+            <span class="label">B</span>
+            <span class="help">J</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
