@@ -10,4 +10,4 @@ The challenge was not that difficult, but given the fact that it was a lot of re
 
 To conclude, this week is so far the most productive in terms of lines of code per day and also with the most learnt things.
 
-Note: to run the challenge a localserver is needed to get the local json file to load up via http.
+Note: to run the challenge, a localserver is needed to get the local json file to load up via http.
