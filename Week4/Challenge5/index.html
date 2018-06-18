@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JsSchool Bookshelf</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <img src="https://www.jobsity.com/themes/custom/jobsity/images/icons/logo2.svg" alt="Jobsity"><span>JOBSITY</span>
+        </div>
+        <div class="title">
+          <span class="titleText">Bookshelf</span>
+        </div>
+        <div class="search">
+          <i class="fas fa-search"></i>
+          <input type="text" name="search" placeholder="Search..." class="searchBox">
+        </div>
+        <div class="user">
+          <span>Jakob Treml   <i class="fas fa-angle-down"></i> </span>
+          <img src="css/images/User_avatar.png" alt="avatar">
+        </div>
+      </div>
+      <div class="mainContainer">
+        <div class="sidebar">
+          <h3>MAIN</h3>
+          <ul class="fa-ul">
+            <li class="loader active" id="loaderQto"><span class="fa-li"><i class="fas fa-globe"></i></span> Quito</li>
+            <li class="loader" id="loaderCtg"><span class="fa-li"><i class="fas fa-globe"></i></span> Cartagena</li>
+            <li class="loader" id="loaderMdl"><span class="fa-li"><i class="fas fa-globe"></i></span> Medellín</li>
+            <li class="loader" id="loaderDgt"><span class="fa-li"><i class="fas fa-tablet-alt"></i></span> Digital</li>
+            <li class="loader"><span class="fa-li"><i class="fas fa-user-tag"></i></span> Personal Loans</li>
+            <li class="loader"><span class="fa-li"><i class="fas fa-tags"></i></span> New Releases</li>
+          </ul>
+        </div>
+        <div class="mainContent">
+          <div class="headerContent">
+            <div class="currentLibrary">
+              <h3 id="currentLibrary">Quito</h3>
+            </div>
+            <div class="sorter">
+              <span class="active">Release Date</span> | <span>Popularity</span>
+            </div>
+            <div class="displayOption">
+              <span class="active" id="itemView"><i class="fab fa-microsoft"></i> </span>| <span id="listView"><i class="fas fa-th-list"></i></span>
+            </div>
+          </div>
+          <div class="content" id="content">
+            <ul class="bookList" id="bookList">
+              <li></li>
+            </ul>
+            <span class="space">need scroll</span>
+          </div>
+        </div>
+        <div class="sidebarRight">
+          <div class="bookInfo" id="bookInfo">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

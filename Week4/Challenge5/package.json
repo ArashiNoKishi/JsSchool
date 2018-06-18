@@ -1,0 +1,14 @@
+{
+  "name": "challenge5",
+  "version": "1.0.0",
+  "description": "challenge5",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bookshelf"
+  ],
+  "author": "",
+  "license": "ISC"
+}
