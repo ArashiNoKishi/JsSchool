@@ -2,222 +2,222 @@
   "type": "library",
   "list": [
     {
-      "location": "quito",
+      "bookshelf": "quito",
       "bookList": [
         {
           "isbn": "9780201748840",
-          "status": "true",
-          "rating": "2"
+          "isLent": false,
+          "rating": 2
         },
         {
           "isbn": "9788495733184",
-          "status": "true",
-          "rating": "4"
+          "isLent": false,
+          "rating": 4
         },
         {
           "isbn": "9782746052208",
-          "status": "false",
-          "rating": "3"
+          "isLent": true,
+          "rating": 3
         },
         {
           "isbn": "9781499321920",
-          "status": "false",
-          "rating": "5"
+          "isLent": true,
+          "rating": 5
         },
         {
           "isbn": "9786123042387",
-          "status": "false",
-          "rating": "2"
+          "isLent": true,
+          "rating": 2
         },
         {
           "isbn": "9789702601449",
-          "status": "false",
-          "rating": "4"
+          "isLent": true,
+          "rating": 4
         },
         {
           "isbn": "9788428338578",
-          "status": "false",
-          "rating": "1"
+          "isLent": true,
+          "rating": 1
         },
         {
           "isbn": "9788497325721",
-          "status": "false",
-          "rating": "3"
+          "isLent": true,
+          "rating": 3
         },
         {
           "isbn": "9789589831489",
-          "status": "false",
-          "rating": "4"
+          "isLent": true,
+          "rating": 4
         },
         {
           "isbn": "9788441522022",
-          "status": "true",
-          "rating": "1"
+          "isLent": false,
+          "rating": 1
         }
       ]
     },
     {
-      "location": "cartagena",
+      "bookshelf": "cartagena",
       "bookList": [
         {
           "isbn": "9781887902991",
-          "status": "false",
-          "rating": "4"
+          "isLent": true,
+          "rating": 4
         },
         {
           "isbn": "9781451648546",
-          "status": "false",
-          "rating": "5"
+          "isLent": true,
+          "rating": 5
         },
         {
           "isbn": "9789684444959",
-          "status": "true",
-          "rating": "2"
+          "isLent": false,
+          "rating": 2
         },
         {
           "isbn": "9788483014295",
-          "status": "true",
-          "rating": "4"
+          "isLent": false,
+          "rating": 4
         },
         {
           "isbn": "9789702608066",
-          "status": "false",
-          "rating": "3"
+          "isLent": true,
+          "rating": 3
         },
         {
           "isbn": "9788466544566",
-          "status": "true",
-          "rating": "2"
+          "isLent": false,
+          "rating": 2
         },
         {
           "isbn": "9789702602545",
-          "status": "false",
-          "rating": "4"
+          "isLent": true,
+          "rating": 4
         },
         {
           "isbn": "9788492442096",
-          "status": "true",
-          "rating": "3"
+          "isLent": false,
+          "rating": 3
         },
         {
           "isbn": "9781788622530",
-          "status": "false",
-          "rating": "1"
+          "isLent": true,
+          "rating": 1
         },
         {
           "isbn": "9781787127968",
-          "status": "false",
-          "rating": "2"
+          "isLent": true,
+          "rating": 2
         }
       ]
     },
     {
-      "location": "medellin",
+      "bookshelf": "medellin",
       "bookList": [
         {
           "isbn": "9781449355692",
-          "status": "true",
-          "rating": "5"
+          "isLent": false,
+          "rating": 5
         },
         {
           "isbn": "9781788622257",
-          "status": "false",
-          "rating": "3"
+          "isLent": true,
+          "rating": 3
         },
         {
           "isbn": "9781471133916",
-          "status": "true",
-          "rating": "2"
+          "isLent": false,
+          "rating": 2
         },
         {
           "isbn": "9780590502115",
-          "status": "true",
-          "rating": "4"
+          "isLent": false,
+          "rating": 4
         },
         {
           "isbn": "9780739436295",
-          "status": "false",
-          "rating": "4"
+          "isLent": true,
+          "rating": 4
         },
         {
           "isbn": "9781775459620",
-          "status": "true",
-          "rating": "1"
+          "isLent": false,
+          "rating": 1
         },
         {
           "isbn": "9781517213183",
-          "status": "false",
-          "rating": "2"
+          "isLent": true,
+          "rating": 2
         },
         {
           "isbn": "9780007461738",
-          "status": "false",
-          "rating": "4"
+          "isLent": true,
+          "rating": 4
         },
         {
           "isbn": "9781618627049",
-          "status": "true",
-          "rating": "5"
+          "isLent": false,
+          "rating": 5
         },
         {
           "isbn": "9780763757571",
-          "status": "false",
-          "rating": "3"
+          "isLent": true,
+          "rating": 3
         }
       ]
     },
     {
-      "location": "digital",
+      "bookshelf": "digital",
       "bookList": [
         {
           "isbn": "9780520040915",
-          "status": "true",
-          "rating": "2"
+          "isLent": false,
+          "rating": 2
         },
         {
           "isbn": "9788490219928",
-          "status": "true",
-          "rating": "1"
+          "isLent": false,
+          "rating": 1
         },
         {
           "isbn": "9781118002209",
-          "status": "true",
-          "rating": "3"
+          "isLent": false,
+          "rating": 3
         },
         {
           "isbn": "9781449647391",
-          "status": "true",
-          "rating": "5"
+          "isLent": false,
+          "rating": 5
         },
         {
           "isbn": "9781351615365",
-          "status": "true",
-          "rating": "4"
+          "isLent": false,
+          "rating": 4
         },
         {
           "isbn": "9780809123322",
-          "status": "true",
-          "rating": "2"
+          "isLent": false,
+          "rating": 2
         },
         {
           "isbn": "9788428335140",
-          "status": "true",
-          "rating": "1"
+          "isLent": false,
+          "rating": 1
         },
         {
           "isbn": "9788120350731",
-          "status": "true",
-          "rating": "4"
+          "isLent": false,
+          "rating": 4
         },
         {
           "isbn": "9780128002049",
-          "status": "true",
-          "rating": "1"
+          "isLent": false,
+          "rating": 1
         },
         {
           "isbn": "9780262529099",
-          "status": "true",
-          "rating": "2"
+          "isLent": false,
+          "rating": 2
         }
       ]
     }

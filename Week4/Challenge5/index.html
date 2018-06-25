@@ -16,25 +16,27 @@
           <span class="titleText">Bookshelf</span>
         </div>
         <div class="search">
-          <i class="fas fa-search"></i>
-          <input type="text" name="search" placeholder="Search..." class="searchBox">
+          <div class="searchBox">
+            <i class="fas fa-search"></i>
+            <input type="text" name="search" placeholder="Search..." class="searchField">
+          </div>
         </div>
         <div class="user">
-          <span>Jakob Treml   <i class="fas fa-angle-down"></i> </span>
+          <span>Jakob Treml</span><i class="fas fa-angle-down"></i>
           <img src="css/images/User_avatar.png" alt="avatar">
         </div>
       </div>
       <div class="mainContainer">
         <div class="sidebar">
-          <h3>MAIN</h3>
-          <ul class="fa-ul">
-            <li class="loader active" id="loaderQto"><span class="fa-li"><i class="fas fa-globe"></i></span> Quito</li>
-            <li class="loader" id="loaderCtg"><span class="fa-li"><i class="fas fa-globe"></i></span> Cartagena</li>
-            <li class="loader" id="loaderMdl"><span class="fa-li"><i class="fas fa-globe"></i></span> Medellín</li>
-            <li class="loader" id="loaderDgt"><span class="fa-li"><i class="fas fa-tablet-alt"></i></span> Digital</li>
-            <li class="loader"><span class="fa-li"><i class="fas fa-user-tag"></i></span> Personal Loans</li>
-            <li class="loader"><span class="fa-li"><i class="fas fa-tags"></i></span> New Releases</li>
-          </ul>
+          <div class="menuBookshelf">
+            <h3>MAIN</h3>
+            <ul class="fa-ul">
+              <li class="loader active" id="loaderQuito"><span class="fa-li"><i class="fas fa-globe"></i></span> Quito</li>
+              <li class="loader" id="loaderCartagena"><span class="fa-li"><i class="fas fa-globe"></i></span> Cartagena</li>
+              <li class="loader" id="loaderMedellin"><span class="fa-li"><i class="fas fa-globe"></i></span> Medellín</li>
+              <li class="loader" id="loaderDigital"><span class="fa-li"><i class="fas fa-tablet-alt"></i></span> Digital</li>
+            </ul>
+          </div>
         </div>
         <div class="mainContent">
           <div class="headerContent">
@@ -42,27 +44,27 @@
               <h3 id="currentLibrary">Quito</h3>
             </div>
             <div class="sorter">
-              <span class="active">Release Date</span> | <span>Popularity</span>
+              <span class="active" id="releaseDate">Release Date</span> | <span id="popularity">Popularity</span>
             </div>
             <div class="displayOption">
-              <span class="active" id="itemView"><i class="fab fa-microsoft"></i> </span>| <span id="listView"><i class="fas fa-th-list"></i></span>
+              <span class="active itemView" id="itemView"><i class="fas fa-th-large"></i> </span> <span class="itemView" id="listView"><i class="fas fa-th-list"></i></span>
             </div>
           </div>
           <div class="content" id="content">
             <ul class="bookList" id="bookList">
               <li></li>
             </ul>
-            <span class="space">need scroll</span>
           </div>
         </div>
         <div class="sidebarRight">
-          <div class="bookInfo" id="bookInfo">
 
-          </div>
         </div>
       </div>
     </div>
 
-    <script src="js/app.js"></script>
+    <div class="bookInfo" id="bookInfo">
+
+    </div>
+    <script src="js/appEs5.js"></script>
   </body>
 </html>

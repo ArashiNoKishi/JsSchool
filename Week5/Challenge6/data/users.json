@@ -1,0 +1,14 @@
+{
+  "list": [
+    {
+      "username": "user",
+      "name": "User",
+      "password": "user123"
+    },
+    {
+      "username": "jobsity",
+      "name": "Jobsity",
+      "password": "jobsity123"
+    }
+  ]
+}

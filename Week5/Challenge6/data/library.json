@@ -1,0 +1,111 @@
+{
+  "list":
+  [
+    {
+      "title":"Python",
+      "authors":["Chris Fehily"],
+      "image":"http://books.google.com/books/content?id=carqdIdfVlYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "summary":"Named after the Monty Python comedy troupe, Python is an interpreted, open-source, object-oriented programming language. It's also free and runs portably on Windows, Mac OS, Unix, and other operating systems. Python can be used for all manner of programming tasks, from CGI scripts to full-fledged applications. It is gaining popularity among programmers in part because it is easier to read (and hence, debug) than most other programming languages, and it's generally simpler to install, learn, and use. Its line structure forces consistent indentation. Its syntax and semantics make it suitable for simple scripts and large programs. Its flexible data structures and dynamic typing allow you to get a lot done in a few lines. To learn it, you'll need is some basic programming experience and a copy of Python: Visual QuickStart Guide. In patented Visual QuickStart Guide fashion, the book doesn't just tell you how to use Python to develop applications, it shows you, breaking Python into easy-to-digest, step-by-step tasks and providing example code. Python: Visual QuickStart Guide emphasizes the core language and libraries, which are the building blocks for programs. Author Chris Fehily starts with the basics - expressions, statements, numbers, strings - then moves on to lists, dictionaries, functions, and modules before wrapping things up with straightforward discussions of exceptions and classes. Some additional topics covered include:- Object-oriented programming- Working in multiple operating systems- Structuring large programs- Comparing Python to C, Perl, and Java- Handling errors gracefully.",
+      "pages":410,
+      "isbn":"9780201748840",
+      "isLent":false,
+      "rating":2,
+      "location": "quito"
+    },
+    {
+      "title":"Javascript",
+      "authors":["Miguel Ángel Sánchez Maza"],
+      "image":"http://books.google.com/books/content?id=3x09sewjaHIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "pages":186,
+      "isbn":"9788495733184",
+      "isLent":false,
+      "rating":4,
+      "location": "quito"
+    },
+    {
+      "title":"JavaScript",
+      "authors":["Emmanuel Gutierrez"],
+      "image":"http://books.google.com/books/content?id=gsxVpvEC4iUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "summary":"\"Este libro sobre JavaScript está dirigido a todos aquellos que desean aumentar la interactividad de sus sitios Web. El libro tiene dos objetivos: en primer lugar, dominar las bases de JavaScript para poder trabajar con los scripts más frecuentes en la red y, en segundo, descubrir el nuevo potencial de JavaScript cuando se utiliza con las hojas de estilo (CSS), el DHTML, AJAX o con bibliotecas como Prototype o Script.aculo.us. Una vez descrita la sintaxis de base, el libro se apoya en ejemplos significativos (gestión de formularios, del tiempo, de menús de navegación, autocompletación), para comentarlos y demostrar la omnipresencia de JavaScript en una arquitectura Web 2.0. El libro acompaña al lector a través de un recorrido que va de los principios de JavaScript hasta el descubrimiento de los conceptos más avanzados. Los ejemplos y los scripts citados en el libro se pueden descargar en esta página.\" -- ENI Ediciones.",
+      "pages":303,
+      "isbn":"9782746052208",
+      "isLent":true,
+      "rating":3,
+      "location": "quito"
+    },
+    {
+      "title":"Aprende a Programar con Java",
+      "authors":["Ángel Arias"],
+      "image":"http://books.google.com/books/content?id=OvDBCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "summary":"La tecnología Java se compone de una gama de productos basados en el poder de la red y en la idea de que el software debe ser capaz de ejecutarse en diferentes máquinas, sistemas y dispositivos. Los diferentes dispositivos comprenden: ordenadores, servidores, notebooks, PDA (Palm), teléfonos móviles, TV, frigoríficos y todo lo que sea posible. Los programas de Java se ejecutan en diferentes entornos a través de un componente llamado la plataforma JVM (Java Virtual Machine) - que es una especie de traductor de instrucciones específicas del código Java para cada sistema y dispositivo.",
+      "pages":237,
+      "isbn":"9781499321920",
+      "isLent":true,
+      "rating":5,
+      "location": "cartagena"
+    },
+    {
+      "title":"Fundamentos de programación con JAVA (100 algoritmos codificados)",
+      "authors":["Marcelo Villalobos, Ricardo"],
+      "image":"http://books.google.com/books/content?id=rgsvDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "summary":"Con esta publicación el usuario comprenderá que Java es un lenguaje de programación y una plataforma informática rápida, segura y fiable; que su uso no se limita a un solo ámbito, ya que Java está presente en centros de datos, consolas para juegos, súper computadoras, teléfonos móviles, hasta en Internet. A lo largo del libro se desarrollan temas relacionados a los fundamentos de programación, tipos de estructuras, cadenas de caracteres, entre otros. Esta obra está dirigida a ingenieros de sistemas, de informática, desarrolladores y programadores.",
+      "isbn":"9786123042387",
+      "isLent":true,
+      "rating":2,
+      "location": "cartagena"
+    },
+    {
+      "title":"Java para estudiantes",
+      "image":"http://books.google.com/books/content?id=TRUdyfwdaSoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "pages":634,
+      "isbn":"9789702601449",
+      "isLent":true,
+      "rating":4,
+      "location": "cartagena"
+    },
+    {
+      "title":"Aprende a programar con Java 2.ª edición",
+      "authors":["ALFONSO JIMÉNEZ MARÍN",
+      "FRANCISCO MANUEL PÉREZ MONTES"],
+      "image":"http://books.google.com/books/content?id=is3BCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "summary":"Este libro va dirigido a aquellas personas que necesitan iniciarse en el mundo de la programación partiendo de cero, es decir, sin conocimientos previos. Está pensado para el aprendizaje autodidacta, aunque también sirve como apoyo práctico para el estudio de la programación en facultades, escuelas universitarias y ciclos superiores de formación profesional. En esta segunda edición se ha revisado y actualizado el contenido para introducir las importantes novedades incorporadas en la versión 8 de Java. Se han reelaborado algunos capítulos y se han añadido otros nuevos. Asimismo, se han incluido nuevos ejercicios que permiten poner en práctica los nuevos conceptos incluidos. Para aprender a programar se puede usar cualquier lenguaje. Para esta obra se ha elegido el lenguaje Java por ser el más extendido en el mundo de las empresas y en internet dadas su seguridad y su portabilidad. La metodología seguida es eminentemente práctica, pues está basada en breves introducciones teóricas con abundantes ejemplos a las que siguen numerosos ejercicios prácticos, resueltos con detalle y cuya dificultad crece gradualmente. Por ello, si el lector sigue el libro hasta el final con dedicación y paciencia, estará en posesión de los conceptos y las herramientas más importantes de la programación avanzada y del lenguaje Java sin excesiva dificultad.",
+      "pages":402,
+      "isbn":"9788428338578",
+      "isLent":true,
+      "rating":1,
+      "location": "medellin"
+    },
+    {
+      "title":"Programación orientada a objetos con Java",
+      "authors":["Francisco Durán",
+      "Francisco Gutiérrez",
+      "Ernesto Pimentel"],
+      "image":"http://books.google.com/books/content?id=3EQdUbkOVGIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "pages":311,
+      "isbn":"9788497325721",
+      "isLent":true,
+      "rating":3,
+      "location": "medellin"
+    },
+    {
+      "title":"Introducción a la Programación en Java.",
+      "image":"http://books.google.com/books/content?id=t8ReO1PLjuoC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "pages":196,
+      "isbn":"9789589831489",
+      "isLent":true,
+      "rating":4,
+      "location": "digital"
+    },
+    {
+      "title":"JavaScript",
+      "authors":["David Flanagan"],
+      "image":"http://books.google.com/books/content?id=mriFGgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "summary":"JavaScript es el lenguaje interpretado más utilizado, principalmente en la construcción de páginas Web, con una sintaxis muy semejante a Java y a C. Pero, al contrario que Java, no se trata de un lenguaje orientado a objetos propiamente dicho, sino que éste está basado en prototipos, ya que las nuevas clases se generan clonando las clases base (prototipos) y extendiendo su funcionalidad. Este libro es un manual de referencia para el programador, con capítulos que explican todo lo que necesita saber para obtener el máximo partido de JavaScript, así como pulir sus conocimientos y profundizar en el lenguaje. El manual le ofrece la posibilidad de analizar el entorno de la escritura de secuencia de comandos proporcionado por los exploradores web. Además, encontrará una referencia completa para el código JavaScript en la parte del cliente y analiza la herencia de las API, la API DOM de Nivel 2 y los estándares emergentes, como el objeto XMLHttpRequest.",
+      "pages":1168,
+      "isbn":"9788441522022",
+      "isLent":false,
+      "rating":1,
+      "location": "digital"
+    }
+  ]
+}

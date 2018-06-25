@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>BookShelf</h1>
+
+    <% books.forEach((book)=>{ %>
+      <table width="70%">
+        <tr>
+          <th colspan="2">Title: <%= book.title %></th>
+        </tr>
+        <tr>
+          <td>
+            <b>Author(s):</b>
+          </td>
+          <td>
+            <%= book.authors %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Summary:</b>
+          </td>
+          <td>
+            <p><%= book.summary %></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Pages:</b>
+          </td>
+          <td>
+            <%= book.pages %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>ISBN:</b>
+          </td>
+          <td>
+            <a href="/books/<%= book.isbn %>" class="details"><%= book.isbn %></a>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Available:</b>
+          </td>
+          <td>
+            <%if (!book.isLent) { %>
+              Yes <a href="/loan/<%= book.isbn %>">Loan</a>
+            <% } else { %>
+              No
+            <% } %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Rating:</b>
+          </td>
+          <td>
+            <%= book.rating %>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <b>Location:</b>
+          </td>
+          <td class="location">
+            <%= book.location %>
+          </td>
+        </tr>
+      </table>
+      <br>
+    <% }) %>
+  </body>
+</html>

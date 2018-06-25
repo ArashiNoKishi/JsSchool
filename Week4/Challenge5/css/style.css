@@ -35,27 +35,31 @@
 
 body {
   font-family: "PlutoSansLight", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
-  position: fixed;
+  position: relative;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   display: grid;
-  grid-template-rows: 70px 1fr;
+  grid-template-rows: 67px 1fr;
 }
 
 .header {
+  height: 67px;
   background: #fcf8f3;
   top: 0;
   right: 0;
   left: 0;
   display: grid;
-  grid-template-columns: 15% 1fr 1fr 15%;
-  border-bottom: 1px solid #6ec1e4;
+  grid-template-columns: 15% 1fr 1fr 13.6%;
   font-family: "PlutoSansRegular", sans-serif;
+  position: sticky;
+  z-index: 2;
 }
 
 .logo {
@@ -64,27 +68,36 @@ body {
   font-family: "PlutoSansHeavy", sans-serif;
   border-right: 1px solid #d6dee5;
   box-sizing: border-box;
+  padding: 13px;
+  height: 67px;
+  border-bottom: 1px solid #6ec1e4;
 }
 
 .logo img {
-  height: 50px;
-  padding-top: 10px;
+  height: 39px;
+  padding-top: 0;
+  padding-right: 10px;
 }
 
 .logo span {
-  padding-left: 5px;
+  left: -2px;
   position: relative;
-  top: 20px;
+  top: 7px;
   vertical-align: top;
-  font-size: 25px;
+  font-size: 23.5px;
+  letter-spacing: -0.6px;
   font-weight: bold;
 }
 
 .title {
-  font-size: 18px;
-  margin: 20px 25px;
-  position: relative;
+  height: 67px;
+  font-size: 1.3em;
+  height: inherit;
+  padding-top: 20px;
+  padding-left: 16.7px;
+  letter-spacing: -0.5px;
   box-sizing: border-box;
+  border-bottom: 1px solid #6ec1e4;
 }
 
 .titleText {
@@ -93,53 +106,79 @@ body {
 }
 
 .search {
-  position: relative;
-  vertical-align: middle;
-  border-radius: 15px;
-  border: 1px solid #6ec1e4;
-  padding: 1px 10px;
-  margin: 20px;
-  background: white;
+  height: 67px;
   box-sizing: border-box;
-  width: 50%;
-  margin-left: auto;
-  margin-right: 20px;
+  border-bottom: 1px solid #6ec1e4;
 }
 
 .searchBox {
   position: relative;
   vertical-align: middle;
+  border-radius: 15px;
+  border: 1px solid #6ec1e4;
+  padding: 2.5px 10px;
+  margin: 19px;
+  background: white;
+  box-sizing: border-box;
+  width: 52%;
+  margin-left: auto;
+  margin-right: 17px;
+}
+
+.searchField {
+  position: relative;
+  vertical-align: middle;
   border: 0;
-  padding: 5px;
+  padding: 5px 0px;
+  padding-left: 1.1px;
+  letter-spacing: 0.2px;
+  font-size: 11px;
+  color: black;
   font-family: "PlutoSansLight", sans-serif;
 }
 
-.title .fa-search {
-  position: absolute;
-  z-index: 999;
+.title i {
+  font-size: 15px;
+  position: relative;
+  top: 1px;
 }
 
 .user {
-  padding: 10px 0;
+  padding: 11px 0;
   display: table;
   text-align: right;
+  height: 43px;
+  box-sizing: border-box;
+  margin-top: 1px;
+  border-bottom: 1px solid #6ec1e4;
 }
 
-.user span{
+.user span {
+  font-size: 10px;
+  padding: 16.9px 0px 15px 7.5px;
   display: table-cell;
   vertical-align: middle;
   border-left: 1px solid #979797;
 }
 
+.user i {
+  position: relative;
+  top: -5px;
+  right: 15px;
+  font-size: 10px;
+}
+
 .user img {
-  height: 40px;
-  padding: 2px 5px;
+  height: 30px;
+  position: relative;
+  top: 7px;
+  right: 1px;
 }
 
 .mainContainer {
   width: 100%;
   display: grid;
-  grid-template-columns: 15% 1fr 15%;
+  grid-template-columns: 15% 1fr 13.6%;
   background: #231f20;
 }
 
@@ -152,13 +191,23 @@ body {
 }
 
 .sidebar h3 {
+  font-size: 11px;
   padding-left: 15px;
+  padding-top: 9px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  margin-left: 3em;
+  padding-left: 0;
+  margin-top: -4px;
+  font-size: 12px;
 }
 
 .sidebar li {
   font-family: "PlutoSansCondLight", sans-serif;
   color: #7fccea;
-  padding: 10px 0;
+  padding: 9.5px 8px;
   cursor: pointer;
   user-select: none;
 }
@@ -176,19 +225,40 @@ body {
 .headerContent {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 0 7%;
+  padding: 0;
+  position: fixed;
+  left: 15%;
+  z-index: 2;
+  background: #f5f6f8;
+  width: 71.4%;
 }
 
 .currentLibrary {
-  height: inherit;
+  padding: 10px 65px;
+  height: 56px;
+  font-size: 13px;
+  box-sizing: border-box;
 }
 
 .sorter {
+  visibility: hidden;
   text-align: center;
   color: #a8a8a8;
-  height: inherit;
-  font-size: 14px;
-  padding: 20px;
+  height: 56px;
+  font-size: 10.5px;
+  letter-spacing: 0.2px;
+  box-sizing: border-box;
+  padding: 27px 3px 0px 0;
+}
+
+#releaseDate {
+  position: relative;
+  right: 3px;
+}
+
+#popularity {
+  position: relative;
+  left: 6px;
 }
 
 .sorter .active {
@@ -198,9 +268,10 @@ body {
 .displayOption {
   text-align: right;
   color: #979797;
-  height: 100%;
-  padding: 20px 0;
-  font-size: 20px;
+  height: 56px;
+  padding: 25px 66px;
+  font-size: 15px;
+  box-sizing: border-box;
 }
 
 .displayOption .active {
@@ -210,27 +281,25 @@ body {
 .content {
   align-items:center;
   position: relative;
-  padding: 0 20px;
-  overflow-y: auto;
-  overflow-y: scroll;
-  min-height: min-content;
-  min-height: 0;
+  padding: 0px 25px;
+  top: 57.4px;
+  left: -8px;
 }
 
 .bookList {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0px 21px 0 36px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   min-height: 0px;
 }
 
-.loaned {
+.lent {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 10px;
+  top: 10px;
   background: #7fccea;
   color: white;
   padding: 5px;
@@ -244,11 +313,12 @@ body {
   min-height: 200px;
   cursor: pointer;
   user-select: none;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
 }
 
-.detailer .bookTitle {
-  display: block;
+.detailer img {
+  width: 145px;
+  height: 208px;
 }
 
 .noBreak br{
@@ -257,6 +327,20 @@ body {
 
 .bookAuthorLine, .bookPagesLine, .bookSummary,.bookSummaryTitle {
   display: none;
+}
+
+.bookAuthor {
+  display: block;
+}
+
+.noBreak .bookTitle {
+  display: block;
+  font-size: 11px;
+  padding-top: 7px;
+}
+
+.noBreak .bookRating {
+  font-size: 11px;
 }
 
 .content div {
@@ -271,54 +355,91 @@ body {
 
 .bookInfo {
   color: white;
-  font-size: 14px;
+  width: 19.8%;
+  background: rgba(0,0,0,0.8);
+  font-size: 9.8px;
   font-family: "PlutoSansCondLight", sans-serif;
   border-radius: 6px;
-  padding: 8px 0;
+  padding: 26px;
   position: absolute;
+  top: 134px;
+  left: 610px;
   z-index: 1;
-  visibility: hidden;
-}
-
-.space {
-  position: relative;
-  top: 1500px;
-}
-
-.bookInfo::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+  display: none;
 }
 
 .bookInfo h5{
   color: #979797;
-  font-size: 14px;
+  font-size: 10px;
   font-family: "PlutoSansCondBold", sans-serif;
-  margin-bottom: 0;
+  margin-bottom: 3px;
+  margin-top: 5px;
+  padding-left: 1px;
 }
 
 .bookInfo p{
   margin-top: 5px;
+  font-size: 9.8px;
+  max-height: 120px;
+  overflow: auto;
 }
 
-.bookTitle , .bookRating {
+.bookInfo .button {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  border: 1px solid #7fccea;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-family: inherit;
+  color: #7fccea;
+  background: rgba(0,0,0,0.8);
+}
+
+.noBreak .bookTitle {
+  font-family: "PlutoSansCondBold", sans-serif;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  font-size: 9px;
+}
+
+.noBreak .bookAuthor {
+  font-size: 11px;
+}
+
+.bookRating {
   font-family: "PlutoSansCondBold", sans-serif;
   font-weight: bold;
   color: #6ec1e4;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 10px;
 }
 
 .listView {
   display: block;
   width: 100%;
   max-width: none;
+  font-size: 12px;
+}
+
+.listView .bookTitle {
+  font-family: "PlutoSansCondBold", sans-serif;
+  font-weight: bold;
+  color: #7fccea;
+  text-transform: uppercase;
+  font-size:
+}
+
+.listView .bookAuthor {
+  display: inline;
+}
+
+.listView .bookRating {
+  top: 40px;
+  right: 0;
+  position: absolute;
+  font-size: 18px;
 }
 
 .listView .bookImage {
@@ -329,13 +450,14 @@ body {
   float: left;
 }
 
-.listView .bookAuthorLine, .listView .bookPagesLine, .listView .bookSummary, .listView .bookSummaryTitle {
+.listView .bookAuthorLine, .listView .bookPagesLine, .listView .bookSummary, .listView .bookSummaryTitle, .listView h5 {
   display: inline;
 }
 
 #itemView, #listView {
   cursor: pointer;
   user-select: none;
+  margin: 0px 0.7px;
 }
 
 #bookTitle {
@@ -352,9 +474,4 @@ body {
 
 #bookRating {
   color: #6ec1e4;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 0.8;}
 }
