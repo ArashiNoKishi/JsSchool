@@ -1,0 +1,557 @@
+@font-face {
+  font-family: "PlutoSansThin";
+  src:
+    local('PlutoSansThin'),
+    url("./fonts/PlutoSansCondThin.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "PlutoSansHeavy";
+  src:
+    local('PlutoSansHeavy'),
+    url("./fonts/PlutoSansHeavy.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "PlutoSansRegular";
+  src:
+    local('PlutoSansRegular'),
+    url("./fonts/PlutoSansRegular.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "PlutoSansLight";
+  src:
+    local('PlutoSansLight'),
+    url("./fonts/PlutoSansLight.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "PlutoSansCondBold";
+  src:
+    local('PlutoSansCondBold'),
+    url("./fonts/PlutoSansCondBold.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "PlutoSansCondLight";
+  src:
+    local('PlutoSansCondLight'),
+    url("./fonts/PlutoSansCondLight.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "PlutoSansCondHeavy";
+  src:
+    local('PlutoSansCondHeavy'),
+    url("./fonts/PlutoSansCondHeavy.otf") format('opentype');
+}
+
+body {
+  font-family: "PlutoSansLight", sans-serif;
+  padding: 0;
+  margin: 0;
+  background: #231f20;
+}
+
+.container {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-rows: 67px 1fr;
+}
+
+.header {
+  height: 67px;
+  background: #fcf8f3;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 15% 1fr 1fr 13.6%;
+  font-family: "PlutoSansRegular", sans-serif;
+  position: sticky;
+  z-index: 2;
+}
+
+.logo {
+  background: white;
+  text-align: center;
+  font-family: "PlutoSansHeavy", sans-serif;
+  border-right: 1px solid #d6dee5;
+  box-sizing: border-box;
+  padding: 13px;
+  height: 67px;
+  border-bottom: 1px solid #6ec1e4;
+}
+
+.logo img {
+  height: 39px;
+  padding-top: 0;
+  padding-right: 10px;
+}
+
+.logo span {
+  left: -2px;
+  position: relative;
+  top: 7px;
+  vertical-align: top;
+  font-size: 23.5px;
+  letter-spacing: -0.6px;
+  font-weight: bold;
+}
+
+.title {
+  height: 67px;
+  font-size: 1.3em;
+  height: inherit;
+  padding-top: 20px;
+  padding-left: 16.7px;
+  letter-spacing: -0.5px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #6ec1e4;
+}
+
+.titleText {
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.search {
+  height: 67px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #6ec1e4;
+}
+
+.searchBox {
+  position: relative;
+  vertical-align: middle;
+  border-radius: 15px;
+  border: 1px solid #6ec1e4;
+  padding: 2.5px 10px;
+  margin: 19px;
+  background: white;
+  box-sizing: border-box;
+  width: 52%;
+  margin-left: auto;
+  margin-right: 17px;
+  display: flex;
+}
+
+.searchField {
+  position: relative;
+  vertical-align: middle;
+  border: 0;
+  padding: 5px 0px;
+  padding-left: 1.1px;
+  letter-spacing: 0.2px;
+  font-size: 11px;
+  color: black;
+  font-family: "PlutoSansLight", sans-serif;
+  flex: 1;
+}
+
+.title i {
+  font-size: 15px;
+  position: relative;
+  top: 1px;
+}
+
+.user {
+  padding: 11px 0;
+  display: table;
+  text-align: right;
+  height: 43px;
+  box-sizing: border-box;
+  margin-top: 1px;
+  border-bottom: 1px solid #6ec1e4;
+}
+
+.user span {
+  font-size: 10px;
+  padding: 16.9px 0px 15px 7.5px;
+  display: table-cell;
+  vertical-align: middle;
+  border-left: 1px solid #979797;
+}
+
+.user i {
+  position: relative;
+  top: -5px;
+  right: 15px;
+  font-size: 10px;
+}
+
+.user img {
+  height: 30px;
+  position: relative;
+  top: 7px;
+  right: 1px;
+}
+
+.mainContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15% 1fr 13.6%;
+  background: #231f20;
+}
+
+.sidebar {
+  font-family: "PlutoSansCondBold", sans-serif;
+  background: #231f20;
+  border-right: 1px solid #767e87;
+  padding: 10px 8%;
+  color: white;
+}
+
+.menuBookshelf {
+  position: fixed;
+}
+
+.sidebar h3 {
+  font-size: 11px;
+  padding-left: 15px;
+  padding-top: 9px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  margin-left: 3em;
+  padding-left: 0;
+  margin-top: -4px;
+  font-size: 12px;
+}
+
+.sidebar li {
+  font-family: "PlutoSansCondLight", sans-serif;
+  color: #7fccea;
+  padding: 9.5px 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.sidebar .active {
+  color: white;
+}
+
+.mainContent {
+  background: #f5f6f8;
+  display: grid;
+  grid-template-rows: 10% 1fr;
+}
+
+.headerContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0;
+  position: fixed;
+  left: 15%;
+  z-index: 2;
+  background: #f5f6f8;
+  width: 71.4%;
+}
+
+.currentLibrary {
+  padding: 10px 65px;
+  height: 56px;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.sorter {
+  visibility: hidden;
+  text-align: center;
+  color: #a8a8a8;
+  height: 56px;
+  font-size: 10.5px;
+  letter-spacing: 0.2px;
+  box-sizing: border-box;
+  padding: 27px 3px 0px 0;
+}
+
+#releaseDate {
+  position: relative;
+  right: 3px;
+}
+
+#popularity {
+  position: relative;
+  left: 6px;
+}
+
+.sorter .active {
+  font-weight: bold;
+}
+
+.displayOption {
+  text-align: right;
+  color: #979797;
+  height: 56px;
+  padding: 25px 66px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.displayOption .active {
+  color: #7fccea
+}
+
+.content {
+  align-items:center;
+  position: relative;
+  padding: 57.4px 25px 0;
+}
+
+.bookList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px 10.5px 0;
+  justify-content: space-around;
+  min-height: 0px;
+}
+
+.listView {
+  display: block;
+  flex-wrap: wrap;
+}
+
+.itemView {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.itemView li {
+  max-width: 150px;
+  min-height: 200px;
+}
+
+.itemView .lent {
+  position: absolute;
+  background: #7fccea;
+  color: white;
+  padding: 5px;
+}
+
+.listView .lent {
+  background: #7fccea;
+  color: white;
+  padding: 5px;
+  float: right;
+}
+
+.itemview .detailer {
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+  max-width: 150px;
+  min-height: 200px;
+  cursor: pointer;
+  user-select: none;
+  margin-bottom: 6px;
+}
+
+.detailer img {
+  width: 145px;
+  height: 208px;
+}
+
+.itemView br{
+  display: none;
+}
+
+.bookAuthorLine, .bookPagesLine, .bookSummary, .bookSummaryTitle, .bookLocation {
+  display: none;
+}
+
+.bookAuthor {
+  display: block;
+}
+
+.itemView .bookTitle {
+  display: block;
+  font-size: 11px;
+  padding-top: 7px;
+}
+
+.itemView .bookRating {
+  font-size: 11px;
+  display: block;
+}
+
+.sidebarRight {
+  background: #231f20;
+  border-left: 1px solid #767e87;
+}
+
+.bookInfo {
+  color: white;
+  width: 19.8%;
+  background: rgba(0,0,0,0.8);
+  font-size: 9.8px;
+  font-family: "PlutoSansCondLight", sans-serif;
+  border-radius: 6px;
+  padding: 26px;
+  position: fixed;
+  top: 134px;
+  left: 610px;
+  z-index: 1;
+}
+
+.bookInfo h5{
+  color: #979797;
+  font-size: 10px;
+  font-family: "PlutoSansCondBold", sans-serif;
+  margin-bottom: 3px;
+  margin-top: 5px;
+  padding-left: 1px;
+}
+
+.bookInfo p{
+  margin-top: 5px;
+  font-size: 9.8px;
+  max-height: 120px;
+  overflow: auto;
+}
+
+.bookInfo .button {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  border: 1px solid #7fccea;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-family: inherit;
+  color: #7fccea;
+  background: rgba(0,0,0,0.8);
+}
+
+.lendButton, .cancelButton {
+  position: absolute;
+  border: 1px solid #7fccea;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-family: inherit;
+  color: #7fccea;
+  background: rgba(0,0,0,0.8);
+}
+
+.bookInfo .lendButton {
+  right: 7px;
+  bottom: 7px;
+}
+
+.lendBook {
+  color: white;
+  width: 19.8%;
+  background: rgba(0,0,0,0.8);
+  font-size: 9.8px;
+  font-family: "PlutoSansCondLight", sans-serif;
+  border-radius: 6px;
+  padding: 26px;
+  position: fixed;
+  top: 134px;
+  left: 290px;
+  z-index: 1;
+}
+
+.lendBook .lendButton {
+  right: 53px;
+  bottom: 7px;
+}
+
+.lendBook .cancelButton {
+  right: 7px;
+  bottom: 7px;
+}
+
+.itemView .bookTitle {
+  font-family: "PlutoSansCondBold", sans-serif;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  font-size: 9px;
+}
+
+.itemView .bookAuthor {
+  font-size: 11px;
+  display: block;
+}
+
+.bookRating {
+  font-family: "PlutoSansCondBold", sans-serif;
+  font-weight: bold;
+  color: #6ec1e4;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.listView {
+  display: block;
+  width: 97%;
+  max-width: none;
+  font-size: 12px;
+}
+
+.listView .detailer {
+  display: inline-block;
+  padding: 10px;
+  position: relative;
+  min-height: 200px;
+  margin-bottom: 6px;
+}
+
+.listView .bookTitle {
+  font-family: "PlutoSansCondBold", sans-serif;
+  font-weight: bold;
+  color: #7fccea;
+  text-transform: uppercase;
+  font-size:
+}
+
+.listView .bookAuthor {
+  display: inline;
+}
+
+.listView .bookRating {
+  top: 40px;
+  right: 0;
+  position: absolute;
+  font-size: 18px;
+}
+
+.listView .bookImage {
+  float: left;
+}
+
+.listView .bookRating {
+  float: left;
+}
+
+.listView .bookAuthorLine, .listView .bookPagesLine, .listView .bookSummary, .listView .bookSummaryTitle, .listView h5 {
+  display: inline;
+}
+
+#itemView, #listView {
+  cursor: pointer;
+  user-select: none;
+  margin: 0px 0.7px;
+}
+
+#bookTitle {
+  font-family: "PlutoSansCondBold", sans-serif;
+  font-weight: bold;
+  color: #6ec1e4;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#bookAuthor {
+  color: #979797;
+}
+
+#bookRating {
+  color: #6ec1e4;
+}
