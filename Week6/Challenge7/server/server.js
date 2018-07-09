@@ -62,16 +62,22 @@ app.get('/api/books&location=:location', verifyToken, (req, res) => {
   });
 });
 
-app.put('/api/lend/:isbn', verifyToken, (req, res) => {
-  jwt.verify(req.token, 'topsecret', (err, authData) => {
+app.post('/api/lend/:isbn', (req, res) => {
+  bookData.updateOne({isbn: req.params.isbn}, {isLent: 'true', lentTill: new Date(req.body.lentTill)}, (err) =>{
     if (err) {
-      res.send({status: false});
+      console.log(err);
     } else {
-      bookData.updateOne(req.params.isbn, {isLent: 'true', lentTill: new Date(req.body.lentTill)}, (err) =>{
-        res.send({status: true});
-      });
+      console.log('book lent');
+      res.send({status: true});
     }
   });
+  // jwt.verify(req.token, 'topsecret', (err, authData) => {
+  //   if (err) {
+  //     res.send({status: false});
+  //   } else {
+  //
+  //   }
+  // });
 });
 
 app.post('/api/login', (req, res) => {

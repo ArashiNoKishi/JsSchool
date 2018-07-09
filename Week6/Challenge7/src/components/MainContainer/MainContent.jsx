@@ -189,7 +189,7 @@ class BookLend extends React.Component {
 
   async lendBook(book) {
     if (this.state.selectedDay) {
-      await axios.put('/api/lend/'+book.isbn, {headers: {Authorization: localStorage.getItem('token')}});
+      await axios.post('/api/lend/'+book.isbn, {lentTill: this.state.selectedDay.getTime()});
     }
   }
 
