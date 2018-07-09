@@ -54,6 +54,82 @@ body {
   background: #231f20;
 }
 
+.loginForm {
+  background: #f5f6f8;
+  width: 20%;
+  position: fixed;
+  top: 15%;
+  left: 37%;
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.loginLogo {
+  text-align: center;
+  font-family: "PlutoSansHeavy", sans-serif;
+  box-sizing: border-box;
+  padding: 2px;
+  height: 67px;
+}
+
+.loginLogo span {
+  left: 4px;
+  position: relative;
+  top: 15px;
+  vertical-align: top;
+  font-size: 23.5px;
+  letter-spacing: -0.6px;
+  font-weight: bold;
+}
+
+.loginBox {
+  position: relative;
+  vertical-align: middle;
+  border-radius: 15px;
+  border: 1px solid #6ec1e4;
+  padding: 2.5px 10px;
+  background: white;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.loginBox form {
+  font-size: 15px;
+}
+
+.loginBox i {
+  padding-top: 4px;
+}
+
+.loginButton{
+  background: black;
+  border: 1px solid #6ec1e4;
+  color: white;
+  padding: 4px 10px;
+  margin-top: 11px;
+  border-radius: 12px;
+  align-self: center;
+}
+
+.loginField {
+  position: relative;
+  vertical-align: middle;
+  border: 0;
+  padding: 5px 0px;
+  padding-left: 1.1px;
+  letter-spacing: 0.2px;
+  font-size: 11px;
+  color: black;
+  font-family: "PlutoSansLight", sans-serif;
+  flex: 1;
+}
+
+.logo img {
+  height: 39px;
+  padding-top: 0;
+  padding-right: 10px;
+}
+
 .container {
   position: relative;
   top: 0;
@@ -170,18 +246,24 @@ body {
   border-bottom: 1px solid #6ec1e4;
 }
 
-.user span {
+.user .userAvatar {
   font-size: 10px;
-  padding: 16.9px 0px 15px 7.5px;
+  padding: 16.9px 19px 15px 41.5px;
   display: table-cell;
   vertical-align: middle;
   border-left: 1px solid #979797;
+  position: relative;
+  cursor: pointer;
+}
+
+.user .userAvatar:hover {
+  color: #979797;
 }
 
 .user i {
   position: relative;
-  top: -5px;
-  right: 15px;
+  top: 0px;
+  right: -7px;
   font-size: 10px;
 }
 
@@ -190,6 +272,29 @@ body {
   position: relative;
   top: 7px;
   right: 1px;
+}
+
+.logoutButton {
+  position: absolute;
+  display: block;
+  right: 0px;
+  top: 52px;
+  background: #fcf8f3;
+  padding: 10px;
+  color: black;
+  width: 8.2%;
+  text-align: center;
+  font-size: 12px;
+  cursor: pointer;
+  border: 0 1px 1px 1px solid #979797;
+}
+
+.logoutButton:hover {
+  background: #f7ecdf;
+}
+
+.logoutButton:active {
+  background: #f2e0ca;
 }
 
 .mainContainer {
@@ -300,9 +405,18 @@ body {
 }
 
 .content {
+  min-height: 521px;
   align-items:center;
   position: relative;
   padding: 57.4px 25px 0;
+}
+
+.loading {
+  vertical-align: middle;
+  align-self: center;
+  position: relative;
+  top: 35%;
+  left: 45%;
 }
 
 .bookList {
@@ -313,9 +427,13 @@ body {
   min-height: 0px;
 }
 
-.listView {
+.bookAuthor {
   display: block;
-  flex-wrap: wrap;
+}
+
+.sidebarRight {
+  background: #231f20;
+  border-left: 1px solid #767e87;
 }
 
 .itemView {
@@ -326,6 +444,47 @@ body {
 .itemView li {
   max-width: 150px;
   min-height: 200px;
+  margin: 0 10px;
+}
+
+.detailer img {
+  width: 145px;
+  height: 208px;
+}
+
+.itemView br{
+  display: none;
+}
+
+.itemView .bookRating {
+  font-size: 11px;
+  display: block;
+}
+
+.itemView .bookTitle {
+  font-family: "PlutoSansCondBold", sans-serif;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  font-size: 9px;
+  display: block;
+  font-size: 11px;
+  padding-top: 7px;
+}
+
+.itemView .bookAuthor {
+  font-size: 11px;
+  display: block;
+}
+
+.itemView .bookAuthorLine,
+.itemView .bookPagesLine,
+.itemView .bookSummary,
+.itemView .bookSummaryTitle,
+.itemView .bookRatingTitle,
+.itemView .bookYear,
+.itemView .bookLocation {
+  display: none;
 }
 
 .itemView .lent {
@@ -333,13 +492,6 @@ body {
   background: #7fccea;
   color: white;
   padding: 5px;
-}
-
-.listView .lent {
-  background: #7fccea;
-  color: white;
-  padding: 5px;
-  float: right;
 }
 
 .itemview .detailer {
@@ -353,142 +505,9 @@ body {
   margin-bottom: 6px;
 }
 
-.detailer img {
-  width: 145px;
-  height: 208px;
-}
-
-.itemView br{
-  display: none;
-}
-
-.bookAuthorLine, .bookPagesLine, .bookSummary, .bookSummaryTitle, .bookLocation {
-  display: none;
-}
-
-.bookAuthor {
-  display: block;
-}
-
-.itemView .bookTitle {
-  display: block;
-  font-size: 11px;
-  padding-top: 7px;
-}
-
-.itemView .bookRating {
-  font-size: 11px;
-  display: block;
-}
-
-.sidebarRight {
-  background: #231f20;
-  border-left: 1px solid #767e87;
-}
-
-.bookInfo {
-  color: white;
-  width: 19.8%;
-  background: rgba(0,0,0,0.8);
-  font-size: 9.8px;
-  font-family: "PlutoSansCondLight", sans-serif;
-  border-radius: 6px;
-  padding: 26px;
-  position: fixed;
-  top: 134px;
-  left: 610px;
-  z-index: 1;
-}
-
-.bookInfo h5{
-  color: #979797;
-  font-size: 10px;
-  font-family: "PlutoSansCondBold", sans-serif;
-  margin-bottom: 3px;
-  margin-top: 5px;
-  padding-left: 1px;
-}
-
-.bookInfo p{
-  margin-top: 5px;
-  font-size: 9.8px;
-  max-height: 120px;
-  overflow: auto;
-}
-
-.bookInfo .button {
-  position: absolute;
-  right: 7px;
-  top: 7px;
-  border: 1px solid #7fccea;
-  border-radius: 50%;
-  padding: 2px 5px;
-  font-family: inherit;
-  color: #7fccea;
-  background: rgba(0,0,0,0.8);
-}
-
-.lendButton, .cancelButton {
-  position: absolute;
-  border: 1px solid #7fccea;
-  border-radius: 5px;
-  padding: 2px 5px;
-  font-family: inherit;
-  color: #7fccea;
-  background: rgba(0,0,0,0.8);
-}
-
-.bookInfo .lendButton {
-  right: 7px;
-  bottom: 7px;
-}
-
-.lendBook {
-  color: white;
-  width: 19.8%;
-  background: rgba(0,0,0,0.8);
-  font-size: 9.8px;
-  font-family: "PlutoSansCondLight", sans-serif;
-  border-radius: 6px;
-  padding: 26px;
-  position: fixed;
-  top: 134px;
-  left: 290px;
-  z-index: 1;
-}
-
-.lendBook .lendButton {
-  right: 53px;
-  bottom: 7px;
-}
-
-.lendBook .cancelButton {
-  right: 7px;
-  bottom: 7px;
-}
-
-.itemView .bookTitle {
-  font-family: "PlutoSansCondBold", sans-serif;
-  font-weight: bold;
-  color: black;
-  text-transform: uppercase;
-  font-size: 9px;
-}
-
-.itemView .bookAuthor {
-  font-size: 11px;
-  display: block;
-}
-
-.bookRating {
-  font-family: "PlutoSansCondBold", sans-serif;
-  font-weight: bold;
-  color: #6ec1e4;
-  text-transform: uppercase;
-  font-size: 10px;
-}
-
 .listView {
+  display: block;
+  flex-wrap: wrap;
   display: block;
   width: 97%;
   max-width: none;
@@ -530,17 +549,46 @@ body {
   float: left;
 }
 
-.listView .bookAuthorLine, .listView .bookPagesLine, .listView .bookSummary, .listView .bookSummaryTitle, .listView h5 {
+.listView .bookAuthorLine,
+.listView .bookPagesLine,
+.listView .bookSummary,
+.listView .bookSummaryTitle,
+.listView .bookRatingTitle,
+.listView h5 {
   display: inline;
 }
 
-#itemView, #listView {
-  cursor: pointer;
-  user-select: none;
-  margin: 0px 0.7px;
+.listView .bookLocation {
+  display: block;
 }
 
-#bookTitle {
+.listView .lent {
+  background: #7fccea;
+  color: white;
+  padding: 5px;
+  float: right;
+}
+
+.bookInfo {
+  color: white;
+  width: 19.8%;
+  background: rgba(0,0,0,0.8);
+  font-size: 9.8px;
+  font-family: "PlutoSansCondLight", sans-serif;
+  border-radius: 6px;
+  padding: 26px;
+  position: fixed;
+  top: 134px;
+  left: 610px;
+  z-index: 1;
+}
+
+.bookInfo .bookAuthorLine,
+.bookInfo .bookPagesLine {
+  display: inline;
+}
+
+.bookInfo .bookTitle {
   font-family: "PlutoSansCondBold", sans-serif;
   font-weight: bold;
   color: #6ec1e4;
@@ -548,10 +596,129 @@ body {
   font-size: 16px;
 }
 
-#bookAuthor {
+.bookInfo .bookAuthor {
   color: #979797;
+  display: inline;
 }
 
-#bookRating {
+.bookInfo .bookImage, .bookInfo .lent {
+  display: none;
+}
+
+.bookInfo h5{
+  color: #979797;
+  font-size: 10px;
+  font-family: "PlutoSansCondBold", sans-serif;
+  margin-bottom: 3px;
+  margin-top: 5px;
+  padding-left: 1px;
+  display: inline;
+}
+
+.bookInfo .bookSummary {
+  margin-top: 5px;
+  font-size: 9.8px;
+  max-height: 120px;
+  overflow: auto;
+  display: inherit;
+}
+
+.bookInfo .closeButton {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  border: 1px solid #7fccea;
+  border-radius: 50%;
+  padding: 2px 5px;
+  font-family: inherit;
+  color: #7fccea;
+  background: rgba(0,0,0,0.8);
+  cursor: pointer;
+}
+
+.bookInfo .closeButton:hover {
+  background: #191919;
+}
+
+.bookInfo .closeButton:active {
+  background: #323232;
+}
+
+.lendButton, .cancelButton {
+  position: absolute;
+  border: 1px solid #7fccea;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-family: inherit;
+  color: #7fccea;
+  background: rgba(0,0,0,0.8);
+  cursor: pointer;
+}
+
+.bookInfo .lendButton {
+  right: 7px;
+  bottom: 7px;
+  cursor: pointer;
+}
+
+.bookInfo .lendButton:hover {
+  background: #191919;
+}
+
+.bookInfo .lendButton:active {
+  background: #323232;
+}
+
+.lendBook {
+  color: white;
+  width: 19.8%;
+  background: rgba(0,0,0,0.8);
+  font-size: 9.8px;
+  font-family: "PlutoSansCondLight", sans-serif;
+  border-radius: 6px;
+  padding: 26px;
+  position: fixed;
+  top: 134px;
+  left: 290px;
+  z-index: 1;
+}
+
+.lendBook .lendButton {
+  right: 53px;
+  bottom: 7px;
+}
+
+.lendBook .lendButton:hover {
+  background: #191919;
+}
+
+.lendBook .lendButton:active {
+  background: #323232;
+}
+
+.lendBook .cancelButton {
+  right: 7px;
+  bottom: 7px;
+}
+
+.lendBook .cancelButton:hover {
+  background: #191919;
+}
+
+.lendBook .cancelButton:active {
+  background: #323232;
+}
+
+.bookRating {
+  font-family: "PlutoSansCondBold", sans-serif;
+  font-weight: bold;
   color: #6ec1e4;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+#itemView, #listView {
+  cursor: pointer;
+  user-select: none;
+  margin: 0px 0.7px;
 }

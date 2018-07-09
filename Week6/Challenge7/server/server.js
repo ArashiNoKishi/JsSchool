@@ -1,6 +1,7 @@
 let express = require('express');
 let bodyParser = require('body-parser');
 let path = require('path');
+let jwt = require('jsonwebtoken');
 let mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/bookshelf');
 let Schema = mongoose.Schema;
@@ -14,6 +15,7 @@ let bookDataSchema = new Schema({
   isLent: Boolean,
   rating: Number,
   location: String,
+  lentTill: Date,
 }, {collection: 'bookData'});
 
 let userDataSchema = new Schema({
@@ -28,43 +30,74 @@ let bookData = mongoose.model('bookData', bookDataSchema);
 let app = express();
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/api/books', (req, res) => {
-  bookData.find()
-    .then((books)=> {
-      res.send({books: books});
-    })
-    .catch((err) => {
-      console.error(err);
-    });
-});
-
-app.get('/api/books&location=:location', (req, res) => {
-  bookData.find(req.params, (err, book) => {
-    res.send({books: book});
+app.get('/api/books', verifyToken, (req, res) => {
+  jwt.verify(req.token, 'topsecret', (err, authData) => {
+    if (err) {
+      res.send({status: false});
+    } else {
+      bookData.find()
+        .then((books)=> {
+          res.send({status: true, books: books});
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    }
   });
 });
 
-app.get('/api/lend/:isbn', (req, res) => {
-  bookData.updateOne(req.params, {isLent: 'true'}, (err) =>{
-    res.send({status: 'succes'});
+app.get('/api/books&location=:location', verifyToken, (req, res) => {
+  jwt.verify(req.token, 'topsecret', (err, authData) => {
+    if (err) {
+      res.send({status: false});
+    } else {
+      bookData.find(req.params, (err, book) => {
+        res.send({status: true, books: book});
+      });
+    }
   });
 });
 
-app.post('/login', (req, res) => {
-  userData.findOne({'username': req.body.user}, (err, user) => {
-    console.log(user, req.body);
-    if (user.password == req.body.password) {
+app.put('/api/lend/:isbn', verifyToken, (req, res) => {
+  jwt.verify(req.token, 'topsecret', (err, authData) => {
+    if (err) {
+      res.send({status: false});
+    } else {
+      bookData.updateOne(req.params.isbn, {isLent: 'true', lentTill: new Date(req.body.lentTill)}, (err) =>{
+        res.send({status: true});
+      });
+    }
+  });
+});
+
+app.post('/api/login', (req, res) => {
+  userData.findOne({'username': req.body.username}, (err, user) => {
+    if (user && (user.password == req.body.password)) {
+      jwt.sign({user: user.username, name: user.name}, 'topsecret',
+      {expiresIn: '2h'}, (err, token) => {
+        res.send({name: user.name, token});
+      });
       console.log('logged in succesfull');
-      res.redirect('/books');
     } else {
       console.log('username or password incorrect');
     }
   });
 });
+
+function verifyToken(req, res, next) {
+  const bearerHeader = req.headers['authorization'];
+  if (typeof bearerHeader !== 'undefined') {
+    const bearerToken = bearerHeader.split(' ') [1];
+    req.token = bearerToken;
+    next();
+  } else {
+    res.sendStatus(403);
+  }
+};
 
 app.listen(3001, () => {
   console.log('Server started on port 3001...');

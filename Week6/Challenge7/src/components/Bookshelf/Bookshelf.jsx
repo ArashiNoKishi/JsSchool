@@ -17,18 +17,34 @@ export class Header extends React.Component {
           <span className="titleText">Bookshelf</span>
         </div>
         <SearchBox onTextChange={text => this.props.filterUpdate(text)}/>
-        <UserAvatar user={{name: 'Jacob Treml', avatar:'./src/css/images/User_avatar.png'}}/>
+        <UserAvatar user={{name: this.props.user, avatar:'./src/css/images/User_avatar.png'}} logoutHandler={this.props.logoutHandler}/>
       </div>
     );
   }
 }
 
 class UserAvatar extends React.Component {
+  constructor(){
+    super();
+    this.state = {
+      'displayMenu': false
+    };
+
+    this.toggleMenu = this.toggleMenu.bind(this);
+  }
+
+
+  toggleMenu() {
+    this.setState({'displayMenu': !this.state.displayMenu});
+  }
+
   render() {
     return (
       <div className="user">
-        <span>{this.props.user.name}</span><i className="fas fa-angle-down"></i>
+        <span className="userAvatar" onClick={this.toggleMenu}><span>{this.props.user.name}</span><i className="fas fa-angle-down"></i></span>
         <img src={this.props.user.avatar} alt="avatar"/>
+        {this.state.displayMenu &&
+        <span className="logoutButton" onClick={this.props.logoutHandler}>Logout</span>}
       </div>
     );
   }
@@ -63,8 +79,8 @@ export class Body extends React.Component {
     return (
         <div className="mainContainer">
           <SidebarLeft shelf={this.state.selectedShelf} changeShelf={shelf => this.setState({selectedShelf: shelf})}/>
-          <MainContent shelf={this.state.selectedShelf} filterString={this.props.filterString}/>
-          <div className="sidebarRight"> 
+          <MainContent shelf={this.state.selectedShelf} filterString={this.props.filterString} checkSession={this.props.checkSession}/>
+          <div className="sidebarRight">
 
           </div>
       </div>
