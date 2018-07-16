@@ -22,6 +22,7 @@ let userDataSchema = new Schema({
   username: String,
   name: String,
   password: String,
+  loans: [],
 }, {collection: 'userData'});
 
 let userData = mongoose.model('userData', userDataSchema);
@@ -62,22 +63,52 @@ app.get('/api/books&location=:location', verifyToken, (req, res) => {
   });
 });
 
-app.post('/api/lend/:isbn', (req, res) => {
-  bookData.updateOne({isbn: req.params.isbn}, {isLent: 'true', lentTill: new Date(req.body.lentTill)}, (err) =>{
+app.get('/api/:user/loans', verifyToken, (req, res) => {
+  jwt.verify(req.token, 'topsecret', (err, authData) => {
     if (err) {
-      console.log(err);
+      res.send({status: false});
     } else {
-      console.log('book lent');
-      res.send({status: true});
+      userData.find({username: req.params.user},'loans -_id', (err, data) => {
+        let bookCount = 0;
+        let loans = [];
+        data[0].loans.map(loan => {
+          loans.push(bookData.findOne({isbn: loan.isbn}, (err, book) => {
+            return book;
+          }));
+        });
+        Promise.all(loans)
+          .then(data => {
+            res.send({status: true, books: data});
+          });
+      });
     }
   });
-  // jwt.verify(req.token, 'topsecret', (err, authData) => {
-  //   if (err) {
-  //     res.send({status: false});
-  //   } else {
-  //
-  //   }
-  // });
+});
+
+app.post('/api/lend/', verifyToken, (req, res) => {
+  jwt.verify(req.token, 'topsecret', (err, authData) => {
+    if (err) {
+      res.send({status: false});
+    } else {
+      bookData.updateOne({isbn: req.body.isbn}, {isLent: 'true', lentTill: new Date(req.body.lentTill)}, (err) =>{
+        if (err) {
+          console.log(err);
+        } else {
+          console.log('book lent');
+
+        }
+      });
+      userData.updateOne({username: req.body.user},
+        {$push:{loans:{isbn: req.body.isbn, lentTill: new Date(req.body.lentTill)}}},
+        (err) => {
+        if (err) {
+          console.log(err);
+        } else {
+          console.log('book added to personal loans');
+        }
+      });
+    }
+  });
 });
 
 app.post('/api/login', (req, res) => {

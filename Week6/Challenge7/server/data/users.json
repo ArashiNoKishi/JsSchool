@@ -3,12 +3,20 @@
     {
       "username": "jacobtrml",
       "name": "Jacob Treml",
-      "password": "user123"
+      "password": "user123",
+      "loans": [
+        {"isbn":"9789702601449"},
+        {"isbn":"9782746052208"}
+      ]
     },
     {
       "username": "jobsity",
       "name": "Jobsity",
-      "password": "jobsity123"
+      "password": "jobsity123",
+      "loans": [
+        {"isbn":"9781788622530"},
+        {"isbn":"9789702602545"}
+      ]
     }
   ]
 }

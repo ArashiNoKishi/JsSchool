@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "PlutoSansThin";
+  src:
+    local('PlutoSansThin'),
+    url("../fonts/PlutoSansCondThin.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "PlutoSansHeavy";
+  src:
+    local('PlutoSansHeavy'),
+    url("../fonts/PlutoSansHeavy.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "PlutoSansRegular";
+  src:
+    local('PlutoSansRegular'),
+    url("../fonts/PlutoSansRegular.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "PlutoSansLight";
+  src:
+    local('PlutoSansLight'),
+    url("../fonts/PlutoSansLight.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "PlutoSansCondBold";
+  src:
+    local('PlutoSansCondBold'),
+    url("../fonts/PlutoSansCondBold.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "PlutoSansCondLight";
+  src:
+    local('PlutoSansCondLight'),
+    url("../fonts/PlutoSansCondLight.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "PlutoSansCondHeavy";
+  src:
+    local('PlutoSansCondHeavy'),
+    url("../fonts/PlutoSansCondHeavy.otf") format('opentype');
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #231f20;
+  font-family: "PlutoSansLight", sans-serif;
+}
