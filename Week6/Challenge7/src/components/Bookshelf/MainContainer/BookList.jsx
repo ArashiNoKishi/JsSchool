@@ -7,16 +7,16 @@ import Book from './Book.jsx';
 import BookDetailer from './BookDetailer.jsx';
 
 const Content = styled.div`
-  {
+  
     min-height: 521px;
     align-items: center;
     position: relative;
     padding: 57.4px 25px 0;
-  }
+  
 `;
 
 const BookListUl = styled.ul`
-  {
+  
     list-style-type: none;
     margin: 0;
     padding: 0px 10.5px 0;
@@ -73,11 +73,11 @@ const BookListUl = styled.ul`
         }
       }
     }
-  }
+  
 `;
 
 const BookItem = styled.div`
-  {
+  
     &.itemView {
       > div {
         > li {
@@ -130,7 +130,7 @@ const BookItem = styled.div`
           padding: 5px;
           }
         }
-      }
+      
     }
 
     &.listView {

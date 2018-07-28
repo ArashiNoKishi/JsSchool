@@ -1,7 +1,9 @@
 let express = require('express');
+let http = require('http');
 let bodyParser = require('body-parser');
 let path = require('path');
 let jwt = require('jsonwebtoken');
+let socketIo = require('socket.io');
 let mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/bookshelf');
 let Schema = mongoose.Schema;
@@ -29,6 +31,9 @@ let userData = mongoose.model('userData', userDataSchema);
 let bookData = mongoose.model('bookData', bookDataSchema);
 
 let app = express();
+let server = http.createServer(app);
+let io = socketIo(server);
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -136,6 +141,16 @@ function verifyToken(req, res, next) {
   }
 };
 
-app.listen(3001, () => {
+io.on('connection', socket => {
+  console.log('connected');
+  
+  socket.on('message', book => {
+    io.sockets.emit('message', book);
+    console.log(book);
+    
+  });
+});
+
+server.listen(3001, () => {
   console.log('Server started on port 3001...');
 });

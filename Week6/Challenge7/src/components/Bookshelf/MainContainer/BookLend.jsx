@@ -2,11 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
+import io from 'socket.io-client';
 import 'react-day-picker/lib/style.css';
 import {connect} from 'react-redux';
 
 const BookLendDiv = styled.div`
-  {
+  
     color: #aaa;
     font-size: 9.8px;
     font-family: "PlutoSansCondLight", sans-serif;
@@ -58,6 +59,18 @@ const BookLendDiv = styled.div`
       left: 5px;
       bottom: -17px;
     }
+  
+`;
+
+const NotificationDiv = styled.div`
+  position: fixed;
+  left: 50%;
+  top: 0;
+  width: 500px;
+  height: 67px;
+  
+  p {
+    color: black;
   }
 `;
 
@@ -72,9 +85,18 @@ class BookLend extends React.Component {
     this.handleDayClick = this.handleDayClick.bind(this);
   }
 
+  componentDidMount(){
+    this.socket = io('localhost:3001/api');
+    this.socket.on('message', message => {
+      this.setState({lending: false, message});
+    });
+  }
+
   async lendBook(book) {
     if (this.state.selectedDay) {
       await axios.post('/api/lend/',{isbn: book.isbn, user:this.props.user.username,lentTill: this.state.selectedDay.getTime()}, {headers: {Authorization: localStorage.getItem('token')}});
+      this.setState({lending: true, message: book});
+      this.socket.emit('message', book);
     }
   }
 
@@ -87,6 +109,13 @@ class BookLend extends React.Component {
   render() {
     return (
       <BookLendDiv>
+        {this.state.lending &&
+          <NotificationDiv>
+            <p>
+              An user has lent the book {this.state.message}
+            </p>
+          </NotificationDiv>
+        }
         <DayPickerInput className="calendar" onDayChange={this.handleDayClick} placeholder="Pick a day"/>
         <span className="lendButton"
           onClick={(event) => this.lendBook(this.props.book)}>Lend Book</span>
