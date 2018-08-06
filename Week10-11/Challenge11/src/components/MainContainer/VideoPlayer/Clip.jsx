@@ -81,12 +81,17 @@ class Clip extends Component {
     
     let clipList = this.props.clipList;
     let selectedClip = clipList.list.filter((clip) => clip.id === this.props.clip.id)[0];
-    clipList.list.splice(clipList.list.indexOf(selectedClip), 1);
-
+    let index = clipList.list.indexOf(selectedClip);
+    
     if (this.props.clip === this.props.selectedClip) {
-      this.props.changeClip();
+      if (!(index+1>clipList.list.length)) {
+        this.props.changeClip(clipList.list[++index]);
+      } else {
+        this.props.changeClip();
+      }
     }
-
+    
+    clipList.list.splice(index-1, 1);
     localStorage.setItem('clipList', JSON.stringify(clipList));
     this.props.updateClipList(clipList);
     this.toggleDelete();

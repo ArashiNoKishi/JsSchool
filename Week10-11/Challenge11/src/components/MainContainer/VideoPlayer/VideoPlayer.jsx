@@ -6,8 +6,9 @@ import Player from './Player.jsx';
 import Playlist from './Playlist.jsx';
 import CreateClip from './CreateClip.jsx';
 
+
 export class VideoPlayer extends React.Component {
-  render() {
+  render() {    
     return (
       <MainContainer>
         <Player/>

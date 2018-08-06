@@ -47,7 +47,7 @@ class Playlist extends Component {
         </div>
         <ul>
           <ListItem divider className="listOptions"> 
-            <span> # of clips: {this.props.listLength}</span> 
+            <span> # of clips: {this.props.listLength-1}</span> 
             <span className="autoplay">Autoplay <Switch onChange={(e) => this.handleAutoPlay(e)}/></span> 
           </ListItem>
           {this.props.clipList.list &&

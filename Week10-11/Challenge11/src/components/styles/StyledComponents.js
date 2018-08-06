@@ -82,13 +82,32 @@ export const PlayerDiv = styled.div`
   align-items: center;
   padding: 0 1.3em 0.8em;
 
+  .autoplay {
+    position: absolute;
+    top: 13em;
+    left: 19em;
+
+    button {
+      font-size: 1.7em;
+      background: gray;
+      width: 80px;
+      height: 80px;
+    }
+    
+    div {
+      position: absolute;
+      top: -0.2em;
+      left: 0.35em;
+    }
+  }
+
   video {
     background: black;
     width: 100%;
   }
 
   .videoTitle {
-    min-height: 2.4em;
+    height: 2.4em;
 
     p {
       font-size: 2em;
@@ -128,17 +147,27 @@ export const ControlsDiv = styled.div`
   background: whitesmoke;
   margin-top: -4px;
 
-  div {
+  .progress {
     display: flex;
     flex: 1;
-    height: 1.3em;
-    margin: 0.5em 0;
-
-    div {
+    
+    .progressBar {
+      display: flex;
       flex: 1;
       height: 1.3em;
-      top: -0.5em;
-      pointer-events: none;
+      margin: 0.5em 0;
+
+      div {
+        flex: 1;
+        height: 1.3em;
+        pointer-events: none;
+      }
+    }
+
+    .marker {
+      position: absolute;
+      font-size: 1.1em;
+      color: lightskyblue;
     }
   }
 
@@ -167,17 +196,6 @@ export const HeaderDiv = styled.div`
   font-family: "roboto", sans-serif;
   position: sticky;
   z-index: 2;
-
-  /*
-  @media (max-width: 1200px) {
-    grid-template-columns: 180px 1fr 1fr 13.6%;
-  }
-  @media (max-width: 860px) {
-    grid-template-columns: 180px 1fr 3fr 120px;
-  }
-  @media (max-width: 620px) {
-    grid-template-columns: 180px 100px 1fr 120px;
-  }*/
 `;
 
 export const Logo = styled.div`
@@ -232,12 +250,17 @@ export const MainContainer = styled.div`
     flex-direction: column;
   }
 
-  /* @media (max-width: 1200px) {
-    grid-template-columns: 180px 1fr 13.6%;
+  @media (max-width: 1300px) {
+    grid-template-columns: 1fr;
+
+    .Sidebar {
+      display: none;
+
+      &:hover {
+        display: inherit;
+      }
+    }
   }
-  @media (max-width: 900px) {
-    grid-template-columns: 180px 1fr;
-  } */
 `;
 
 export const ClipDiv = styled.div`
@@ -251,7 +274,7 @@ export const ClipDiv = styled.div`
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1.2em;
-    min-height: 1.2em;
+    height: 1.2em;
     cursor: pointer;
 
     p {
@@ -348,10 +371,6 @@ export const Search = styled.div`
     color: black;
     font-family: "roboto", sans-serif;
     flex: 1;
-
-    /* @media (max-width: 970px) {
-      width: 50%;
-    } */
   }
 `;
 
