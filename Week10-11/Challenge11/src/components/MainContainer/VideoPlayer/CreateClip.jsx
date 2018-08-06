@@ -20,11 +20,13 @@ class CreateClip extends Component {
       clipName: '',
       clipStart: 0,
       clipEnd: 0,
-      clipTags: []
+      clipTags: [],
+      expandedPanel: false
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleExpansion = this.handleExpansion.bind(this);
   }
 
   componentDidMount() {
@@ -43,7 +45,7 @@ class CreateClip extends Component {
       }
 
       return flag;
-  });
+    });
   }
 
   handleChange(e, selector) {
@@ -104,31 +106,36 @@ class CreateClip extends Component {
     e.preventDefault();
     
     let clipList = this.props.clipList;
-
+    
     let newClip = {
-      id: clipList.length+1,
+      id: ++clipList.idCounter,
       name: this.state.clipName,
       start: this.state.clipStart,
       end: this.state.clipEnd,
       tags: this.state.clipTags.length > 0?this.state.clipTags.split(','):[],
     };
-    clipList.push(newClip);
-
+    clipList.list.push(newClip);
+    
+    localStorage.setItem('clipList', JSON.stringify(clipList));
     this.props.updateClipList(clipList);
-    this.refs.panel.expanded = false;
     this.setState({
       clipName: '',
       clipStart: 0,
       clipEnd: 0,
-      clipTags: []
+      clipTags: [],
+      expandedPanel: false
     });
+  }
+
+  handleExpansion() {
+    this.setState({expandedPanel: !this.state.expandedPanel});
   }
 
   render() {
     return (
       <CreateClipDiv>
-        <ExpansionPanel ref="panel">
-          <ExpansionPanelSummary expandIcon={<i class="fas fa-angle-down"></i>}>
+        <ExpansionPanel expanded={this.state.expandedPanel}>
+          <ExpansionPanelSummary expandIcon={<i class="fas fa-angle-down"></i>} onClick={this.handleExpansion}>
             <Typography>Add Clips</Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>

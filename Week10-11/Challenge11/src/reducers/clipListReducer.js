@@ -1,8 +1,8 @@
-export default function (state=null, action) {
+export default function (state={id: 0, list: []}, action) {
   switch (action.type) {
     case 'UPDATE_CLIPLIST':
-      localStorage.setItem('clipList', JSON.stringify(action.payload.clipList));
-      return action.payload.clipList;
+      let clipList = Object.assign({},action.payload.clipList);
+      return clipList;
     }
 
   return state;

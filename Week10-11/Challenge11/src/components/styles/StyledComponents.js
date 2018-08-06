@@ -63,6 +63,13 @@ export const PlaylistDiv = styled.div`
     padding: 0;
     margin: 0;
 
+    .listOptions {
+      .autoplay {
+        position: absolute;
+        right: 0;
+      }
+    }
+
     li {
       padding: 0.4em 0.1em;
     }
@@ -78,6 +85,36 @@ export const PlayerDiv = styled.div`
   video {
     background: black;
     width: 100%;
+  }
+
+  .videoTitle {
+    min-height: 2.4em;
+
+    p {
+      font-size: 2em;
+      width: 27em;
+      padding: 0 0.5em;
+      margin: 0;
+      display: inherit;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+
+      span {
+        font-size: 1em;
+      }
+
+      &:not(.nohover):hover {
+        box-shadow: 0 0 3pt 2pt #aaa;
+        height: auto;
+        background: white;
+        text-overflow: inherit;
+        word-break: break-all;
+        white-space: normal;
+        position: absolute;
+        z-index: 30;
+      }
+    }
   }
 
   span {
@@ -208,16 +245,33 @@ export const ClipDiv = styled.div`
   grid-template-columns: 1fr 30px;
   grid-gap: 0.5em;
   width: 100%;
+  position: relative;
 
   .clipTitle {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 1.2em;
+    min-height: 1.2em;
     cursor: pointer;
-  }
 
-  .clipTime {
+    p {
+      margin: 0;
+      text-overflow: ellipsis;
+      width: 13em;
+      white-space: nowrap;
+      overflow: hidden;
 
+      &:not(.nohover):hover {
+        box-shadow: 0 0 3pt 2pt #aaa;
+        height: auto;
+        background: white;
+        text-overflow: inherit;
+        word-break: break-all;
+        white-space: normal;
+        position: absolute;
+        z-index: 30;
+      }
+    }
   }
 
   .separator {
@@ -246,16 +300,33 @@ export const ClipDiv = styled.div`
       height: 25px;
     }
   }
+
+  .operations {
+    grid-column: 1/3;
+
+    button {
+      margin: 0.3em 0.5em;
+
+      span:nth-child(1) {
+        i {
+          margin-right: 0.2em;
+        }
+      }
+    }
+  }
+
+  &.selected {
+    background: #eaeaea;
+    box-shadow: 0 0 2pt 3pt #eaeaea;
+  }
 `;
 
 export const Search = styled.div`
   position: relative;
   vertical-align: middle;
   border-radius: 15px;
-  /* border: 1px solid #6ec1e4; */
   padding: 2.5px 10px;
   margin: 0;
-  /* background: white; */
   box-sizing: border-box;
   display: inline;
   left: 1em;
